@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Додаткові стилі для плавних анімацій та чистоти інтерфейсу --- */
+
+/* Плавна поява контенту (використовується у фреймер-анімаціях) */
+.fade-enter { 
+  opacity: 0.001; 
+}
+.fade-enter-active { 
+  opacity: 1; 
+  transition: opacity 300ms ease; 
+}
+
+/* Приховуємо скролбар, щоб виглядало як мобільний застосунок */
+::-webkit-scrollbar { 
+  width: 0; 
+  height: 0; 
+}
+
+/* Встановлюємо світлу кольорову схему (біло-чорна тема) */
+:root {
+  color-scheme: light;
+}
+
+/* Можеш додати свої класи нижче, наприклад ефекти чи кастомні кнопки */
+
+/* Приклад: м’яка тінь для карток */
+.shadow-soft {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+/* М’який темно-зелений неоновий ефект */
+.soft-neon {
+  color: #00c06b; /* темно-зелений */
+  text-shadow:
+    0 0 4px #009d59,
+    0 0 8px #00a864,
+    0 0 12px #00c06b;
+  transition: transform 0.25s ease, text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.soft-neon:hover {
+  transform: scale(1.07);
+  color: #00e67a;
+  text-shadow:
+    0 0 6px #00e67a,
+    0 0 12px #00e67a,
+    0 0 20px #00ff94;
+}
